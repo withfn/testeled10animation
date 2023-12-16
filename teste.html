@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=256, initial-scale=1">
+    <title>Bolhas Animadas</title>
+    <style>
+        body {
+            background-color: #000000;
+            overflow: hidden;
+        }
+
+        .bubble {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: bubble 10s ease-in-out infinite;
+        }
+
+        .bubble:nth-child(1) {
+            width: 20px;
+            height: 20px;
+            left: 25%;
+            top: 80%;
+        }
+
+        .bubble:nth-child(2) {
+            width: 40px;
+            height: 40px;
+            left: 50%;
+            top: 60%;
+        }
+
+        .bubble:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            left: 75%;
+            top: 40%;
+        }
+
+        @keyframes bubble {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-200px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+</body>
+
+</html>
